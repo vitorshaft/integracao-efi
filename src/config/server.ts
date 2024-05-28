@@ -257,7 +257,7 @@ async function notificar(urlDiscordWebhook: string, txid: string, valor: string)
 
 
 
-//código escrito por Lucas Carvalho em meados de Fevereiro de 2024
+//código escrito por Lucas Carvalho em meados de Fevereiro de 2024.
 
 //git add .
 //git commit -m "mensagem"

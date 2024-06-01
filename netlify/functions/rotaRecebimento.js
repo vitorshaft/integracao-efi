@@ -56,7 +56,7 @@ exports.handler = async function(event, context) {
   if (body.pix) {
     const pix = body.pix[0];
 
-    if (pix.txid === "70a8cdcb59b54eac0003") {
+    if (pix.txid === "70a8cdcb59b54eac0002") {
       valorDoPix = pix.valor;
       console.log("Creditando valor do pix na máquina 1");
 

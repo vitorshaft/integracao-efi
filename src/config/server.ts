@@ -100,7 +100,7 @@ app.post("/rota-recebimento", async (req, res) => {
 
 
             //arduino
-            if (req.body.pix[0].txid == "70a8cdcb59b54eac0002") {
+            if (req.body.pix[0].txid == "70a8cdcb59b54eac0003") {
                 valorDoPix = req.body.pix[0].valor;
                 console.log("Creditando valor do pix na máquina 1");
             }
@@ -111,12 +111,12 @@ app.post("/rota-recebimento", async (req, res) => {
             // }
 
             //discord - notificações
-            if (req.body.pix[0].txid == "70a8cdcb59b54eac0002") {
+            if (req.body.pix[0].txid == "70a8cdcb59b54eac0003") {
                 var urlDoWebhookNoDiscord = "https://discord.com/api/webhooks/1202796385293045780/5HTCCrI3TB-Zc6wkv94fe9OXjxr51Dkh6uLhN2_UGj2zxQ5OA35S6o77fFF_zwae71_t";
 
                 var loja = "";
 
-                if (req.body.pix[0].txid == "70a8cdcb59b54eac0002") {
+                if (req.body.pix[0].txid == "70a8cdcb59b54eac0003") {
                     loja = "Frente de Caixa 01";
                 }
 
@@ -257,7 +257,7 @@ async function notificar(urlDiscordWebhook: string, txid: string, valor: string)
 
 
 
-//código escrito por Lucas Carvalho em meados de Fevereiro de 2024!
+//código escrito por Lucas Carvalho em meados de Fevereiro de 2024
 
 //git add .
 //git commit -m "mensagem"

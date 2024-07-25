@@ -100,7 +100,7 @@ app.post("/rota-recebimento", async (req, res) => {
 
 
             //arduino
-            if (req.body.pix[0].txid == "70a8cdcb59b54eac0003") {
+            if (req.body.pix[0].txid == "V0CRTmog6XdUQtmhDFeoV2V") {
                 valorDoPix = req.body.pix[0].valor;
                 console.log("Creditando valor do pix na máquina 1");
             }
@@ -131,28 +131,28 @@ app.post("/rota-recebimento", async (req, res) => {
 });
 
 
-app.post("/rota-recebimento-teste", async (req, res) => {
-    try {
-        console.log("Novo pix detectado:");
-        console.log(req.body);
+// app.post("/rota-recebimento-teste", async (req, res) => {
+//     try {
+//         console.log("Novo pix detectado:");
+//         console.log(req.body);
 
-        // console.log("valor:");
-        // console.log(req.body.valor);
-        // console.log("txid:");
-        // console.log(req.body.txid);
+//         // console.log("valor:");
+//         // console.log(req.body.valor);
+//         // console.log("txid:");
+//         // console.log(req.body.txid);
 
-        var txid = req.body.txid;
+//         var txid = req.body.txid;
 
-        valorDoPix = req.body.valor;
-        console.log("setado valor pix para maquina 2:" + req.body.valor);
+//         valorDoPix = req.body.valor;
+//         console.log("setado valor pix para maquina 2:" + req.body.valor);
 
-        console.log(req.body.valor);
-    } catch (error) {
-        console.error(error);
-        return res.status(402).json({ "error": "error: " + error });
-    }
-    return res.status(200).json({ "mensagem": "ok" });
-});
+//         console.log(req.body.valor);
+//     } catch (error) {
+//         console.error(error);
+//         return res.status(402).json({ "error": "error: " + error });
+//     }
+//     return res.status(200).json({ "mensagem": "ok" });
+// });
 
 
 app.get('/brcode', (req, res) => {
